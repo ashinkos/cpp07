@@ -6,7 +6,7 @@
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 03:16:36 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 15:35:07 by aaouni           ###   ########.fr       */
+/*   Updated: 2023/02/24 21:02:03 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ private:
     unsigned int _size;
 public:
     Array(){
-        _tab = new T[0];
+        _tab = new T[0]();
         _size = 0;
     };
     
     Array(unsigned int n){
-        _tab = new T[n];
+        _tab = new T[n]();
         _size = n; 
     };
 
@@ -54,16 +54,22 @@ public:
         delete [] this->_tab;
     };
     
-    T& operator[](int index){
+    T& operator[](int index) {
         if (index >= (int)_size || index < 0)
             throw std::out_of_range("index is out of bounds");
         return(this->_tab[index]);
     };
 
+    const T& operator[](int index) const {
+        if (index >= (int)_size || index < 0)
+            throw std::out_of_range("index is out of bounds");
+        return(this->_tab[index]);
+    };
+
+
     unsigned int size() const{
         return(this->_size);
     }
 };
-
 
 #endif
