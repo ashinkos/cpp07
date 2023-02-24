@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 00:56:54 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 03:11:19 by aaouni           ###   ########.fr       */
+/*   Created: 2023/02/24 03:16:36 by aaouni            #+#    #+#             */
+/*   Updated: 2023/02/24 03:56:23 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"iter.hpp"
+#ifndef ARRAY_HPP
+#define ARRAY_HPP
+#include <iostream>
+
 template<typename T>
-void print(T var)
+class Array
 {
-    std::cout << var << std::endl;
-}
+private:
+    T* _type;
+    unsigned int _size;
+public:
+    Array(){
+        _type = new T[0];
+        _size = 0;
+    };
+    Array(unsigned int n){
+        _type = new T[n];
+        _size = n; 
+    };
+    ~Array(){
+        
+    };
+    Array& operator[](unsigned index)
+};
 
-int main ()
-{
-    std::string str[3] = {"hello", "world", "nothing"};
-    int tab[10] = {5,3,6,8,9,20,53,13,10,9};
-    // iter(tab,10,print);
-    iter(str,3,print);
-    iter(tab,10,print);
 
-}
+#endif

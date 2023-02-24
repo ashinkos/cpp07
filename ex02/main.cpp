@@ -5,24 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 00:56:54 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 03:11:19 by aaouni           ###   ########.fr       */
+/*   Created: 2023/02/24 03:39:42 by aaouni            #+#    #+#             */
+/*   Updated: 2023/02/24 03:44:58 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"iter.hpp"
-template<typename T>
-void print(T var)
-{
-    std::cout << var << std::endl;
-}
+#include "Array.hpp"
+int main(){
+    
+    Array<int> A(5);
 
-int main ()
-{
-    std::string str[3] = {"hello", "world", "nothing"};
-    int tab[10] = {5,3,6,8,9,20,53,13,10,9};
-    // iter(tab,10,print);
-    iter(str,3,print);
-    iter(tab,10,print);
-
+    for(int i = 0; i < 5; i++){
+        std::cout << A[i] << ":";
+    }
+    
 }
