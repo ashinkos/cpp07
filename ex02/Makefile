@@ -1,6 +1,6 @@
 NAME= ex02
 
-SRC = main.cpp Array.hpp\
+SRC = main.cpp \
 
 CC = c++
 FLAGS= -Wall -Werror -Wextra -std=c++98
