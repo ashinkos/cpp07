@@ -9,12 +9,12 @@ PARA  = -c
 OBJ= $(SRC:.cpp=.o)
 
 %.o : %.cpp 
-	@$(CC) $(PARA) $(FLAGS) $<  -o $@
+	$(CC) $(PARA) $(FLAGS) $<  -o $@
 
 all: $(NAME)
 	
 $(NAME): $(OBJ)
-		@${CC} $(OBJ) $(FLAGS) -o ${NAME} 
+		${CC} $(OBJ) $(FLAGS) -o ${NAME} 
 
 clean:
 	rm -rf $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 03:16:36 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 21:02:03 by aaouni           ###   ########.fr       */
+/*   Updated: 2023/02/24 23:17:21 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ public:
     Array(){
         _tab = new T[0]();
         _size = 0;
-    };
+    }
     
     Array(unsigned int n){
         _tab = new T[n]();
         _size = n; 
-    };
+    }
 
     Array(Array& inst){
         this->_tab = new T[inst._size];
@@ -38,7 +38,7 @@ public:
         for(unsigned int i = 0; i < inst._size; i++){
             this->_tab[i] = inst._tab[i];
         }
-    };
+    }
     
     Array& operator=(T inst){
         delete [] this->_tab;
@@ -48,7 +48,7 @@ public:
             this->_tab[i] = inst._tab[i];
         }
         return *this;
-    };
+    }
     
     ~Array(){
         delete [] this->_tab;
@@ -58,13 +58,13 @@ public:
         if (index >= (int)_size || index < 0)
             throw std::out_of_range("index is out of bounds");
         return(this->_tab[index]);
-    };
+    }
 
     const T& operator[](int index) const {
         if (index >= (int)_size || index < 0)
             throw std::out_of_range("index is out of bounds");
         return(this->_tab[index]);
-    };
+    }
 
 
     unsigned int size() const{

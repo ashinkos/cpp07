@@ -6,7 +6,7 @@
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 15:03:58 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 20:56:05 by aaouni           ###   ########.fr       */
+/*   Updated: 2023/02/24 23:15:17 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@
 #define MAX_VAL 750
 int main(int, char**)
 {
-    Array<int> numbers(MAX_VAL);
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));

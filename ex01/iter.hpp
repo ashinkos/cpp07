@@ -6,7 +6,7 @@
 /*   By: aaouni <aaouni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 00:56:51 by aaouni            #+#    #+#             */
-/*   Updated: 2023/02/24 21:21:32 by aaouni           ###   ########.fr       */
+/*   Updated: 2023/02/24 22:33:10 by aaouni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 #include <iostream>
 
 template<typename T>
-void    iter(T* array, int len, void (*ft)(T& var)){
+void    iter(T* array, int len, void ft(const T& var)){
     for (int i = 0; i < len; i++){
         ft(array[i]);
     }
 }
 
 template<typename T>
-void    iter(const T* array, int len, void (*ft)(const T& var)){
+void    iter(const T* array, int len, void ft(const T& var)){
     for (int i = 0; i < len; i++){
         ft(array[i]);
     }
